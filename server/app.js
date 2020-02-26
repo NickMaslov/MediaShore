@@ -1,13 +1,12 @@
 require("dotenv").config();
-// const express = require("express");
-import express from 'express';
+const PORT = process.env.PORT || 5000;
+
+const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes");
 
-let two: string = 'two';
-
 const app = express();
-const PORT = process.env.PORT || 5000;
+
 const mongoURI = process.env.MONGO_URI_ || process.env.MONGO_HOST;
 
 // Data parsing
